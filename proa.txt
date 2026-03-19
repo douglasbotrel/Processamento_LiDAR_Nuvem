@@ -1,0 +1,27 @@
+REM c:\fusion\GroundFilter64 C:\FUSION\DATA\0355\NP_T-0355gnd.laz 8 C:\FUSION\DATA\0355\NP_T-0355.laz
+
+REM pause
+
+REM c:\fusion\GridSurfaceCreate64 C:\FUSION\DATA\0355\NP_T-0355mdt.dtm 1 m m 1 0 0 0 C:\FUSION\DATA\0355\NP_T-0355gnd.laz
+
+REM pause
+
+REM c:\fusion\gridmetrics64 /nointensity C:\FUSION\DATA\0355\NP_T-0355mdt.dtm 2 50 C:\FUSION\DATA\0355\NP_T-0355.csv C:\FUSION\DATA\0355\NP_T-0355.laz
+
+REM pause
+
+REM c:\fusion\csv2grid C:\FUSION\DATA\0355\NP_T-0355_all_returns_elevation_stats.csv 36 C:\FUSION\DATA\0355\NP_T-0355_grid36.asc
+
+REM pause
+
+REM c:\fusion\csv2grid C:\FUSION\DATA\0355\NP_T-0355_all_returns_elevation_stats.csv 50 C:\FUSION\DATA\0355\NP_T-0355_grid50.asc
+
+REM pause
+
+REM c:\fusion\csv2grid C:\FUSION\DATA\0355\NP_T-0355_all_returns_elevation_stats.csv 68 C:\FUSION\DATA\0355\NP_T-0355_grid68.asc
+
+REM pause
+
+C:\lastools\bin\lasboundary64 -i C:\FUSION\DATA\0355\NP_T-0355.laz -o C:\FUSION\DATA\0355\NP_T-0355.shp
+
+pause
