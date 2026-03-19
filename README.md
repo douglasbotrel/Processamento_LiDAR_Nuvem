@@ -16,10 +16,10 @@
 - [3. Instalação dos Softwares](#3-instalação-dos-softwares)
   - [3.1 Preparação do Ambiente](#31--preparação-do-ambiente)
   - [3.2 Ajustes no FUSION](#32--ajustes-no-fusion-suporte-a-laz)
-- [4. Processamento dos Dados](#4-processamento-dos-dados)
-- [5. Verificação no GIS](#5-verificação-no-gis)
-- [6. Armazenamento](#6-armazenamento)
-
+- [4. Avaliação Prévia da Nuvem de Pontos (FUSION)](#4-avaliação-prévia-da-nuvem-de-pontos-fusion)
+- [5. Processamento dos Dados](#5-processamento-dos-dados)
+- [6. Verificação no GIS](#6-verificação-no-gis)
+- [7. Armazenamento](#7-armazenamento)
 ---
 
 ## 1. Objetivo
@@ -95,7 +95,141 @@ O **FUSION (v3.40+)** suporta `.LAZ` via biblioteca **LASzip**.
 
 ---
 
-## 4. Processamento dos Dados
+## 4. Avaliação Prévia da Nuvem de Pontos (FUSION)
+
+Antes de iniciar o processamento dos dados LiDAR, recomenda-se realizar uma **avaliação visual da nuvem de pontos**, com o objetivo de verificar a integridade, densidade e consistência dos dados.
+
+Essa etapa permite validar se o arquivo `.LAZ` possui qualidade adequada para processamento.
+
+---
+
+### 4.1 Abertura do FUSION
+
+1. Executar o aplicativo **FUSION**  
+2. Navegar até:
+
+**Tools → Miscellaneous Utilities → Create an image using LiDAR point data**
+
+---
+
+<p align="center">
+  <img src="images/2.png" width="500"/>
+  <br>
+  <b>Figura 9 – Print da tela do programa FUSION.</b>
+</p>
+
+---
+
+### 4.2 Seleção do arquivo LiDAR
+
+Após acessar a ferramenta, será aberta uma janela para seleção do arquivo `.LAZ`.
+
+Selecionar o arquivo desejado e clicar em **Abrir**.
+
+---
+
+<p align="center">
+  <img src="images/3.png" width="500"/>
+  <br>
+  <b>Figura 10 – Seleção do arquivo LiDAR (.LAZ).</b>
+</p>
+
+---
+
+### 4.3 Definição da saída da imagem
+
+Após abrir o arquivo:
+
+- Definir o local de saída clicando em **Browse**  
+- Escolher o diretório e nome do arquivo de imagem  
+
+Em seguida:
+
+- Iniciar o processamento da imagem  
+- Aguardar a finalização  
+
+Ao término, será exibida a mensagem **“Done”** no rodapé da tela.
+
+---
+
+<p align="center">
+  <img src="images/4.png" width="500"/>
+  <br>
+  <b>Figura 11 – Tela para configuração e geração da imagem.</b>
+</p>
+
+---
+
+### 4.4 Visualização da nuvem de pontos (Raw Data)
+
+Após a geração da imagem:
+
+1. Clicar em **Close**  
+2. Selecionar a opção **Raw Data** no menu superior  
+3. Abrir novamente o arquivo `.LAZ`  
+
+---
+
+<p align="center">
+  <img src="images/5.png" width="500"/>
+  <br>
+  <b>Figura 12 – Tela de acesso aos dados brutos (Raw Data).</b>
+</p>
+
+---
+
+### 4.5 Seleção de área para análise
+
+Com o arquivo carregado:
+
+- Selecionar uma área da nuvem de pontos utilizando o cursor  
+- Definir o tamanho da área de interesse  
+
+> ⚠️ Áreas maiores demandam maior tempo de processamento.
+
+---
+
+<p align="center">
+  <img src="images/6.png" width="500"/>
+  <br>
+  <b>Figura 13 – Seleção de uma porção do transecto para análise.</b>
+</p>
+
+---
+
+### 4.6 Análise tridimensional dos dados
+
+Após o processamento da área selecionada:
+
+- Os dados serão exibidos em visualização tridimensional  
+- É possível rotacionar a cena nos eixos **X, Y e Z**  
+- Permite avaliar a estrutura da vegetação de forma mais realista  
+
+---
+
+<p align="center">
+  <img src="images/7.png" width="350"/>
+  <img src="images/8.png" width="350"/>
+  <img src="images/9.png" width="350"/>
+  <br>
+  <b>Figura 14,15 e 16 – Avaliação da seção selecionada da nuvem de pontos em ambiente 3D.</b>
+</p>
+
+---
+
+### 4.7 Validação dos dados
+
+Com essa análise, é possível verificar:
+
+- Presença de milhares de pontos LiDAR  
+- Distribuição espacial coerente  
+- Representação da vegetação  
+
+Essa etapa garante que os dados possuem qualidade adequada para prosseguir com o processamento.
+
+---
+
+## 5. Processamento dos Dados
 
 Processamento realizado via script no Prompt de Comando.
 
@@ -140,7 +274,7 @@ O caminho destacado deve ser atualizado a cada execução.
 
 ---
 
-## 5. Verificação no GIS
+## 6. Verificação no GIS
 
 Validar os dados em ambiente SIG:
 
@@ -224,12 +358,9 @@ Grid 36 representa altura da vegetação. Recomenda-se reclassificação.
 
 ---
 
-## 6. Armazenamento
+## 7. Armazenamento
 
-Após validação, organizar em repositório:
-
-- Transecto  
-- Área de estudo  
-- Ano  
+Após validação, organizar os itens e "subir" os arquivos gerados e validados para a pasta no drive, conforme sua fonte, área de estudo, ano e código do transecto
 
 ---
+
