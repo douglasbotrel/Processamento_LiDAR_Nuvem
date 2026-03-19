@@ -1,12 +1,11 @@
+
 <p align="center">
-  <img src="images/treelab_logo.png" width="180"/>
+  <img src="images/treelab.png" width="100">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="images/logo.png" width="100">
 </p>
 
 <h1 align="center">Processamento de Dados LiDAR</h1>
-
-<p align="center">
-  <img src="images/ufvjm_logo.png" width="300"/>
-</p>
 
 ---
 
@@ -124,7 +123,7 @@ Arquivos gerados em:
 ---
 
 <p align="center">
-  <img src="images/proab_script.png" width="700"/>
+  <img src="images/proab_script.png" width="500"/>
   <br>
   <b>Figura 1 – Script ProA.bat com destaque para o caminho do arquivo de entrada.</b>
 </p>
@@ -134,7 +133,7 @@ O caminho destacado deve ser atualizado a cada execução.
 ---
 
 <p align="center">
-  <img src="images/arquivos_gerados.png" width="700"/>
+  <img src="images/arquivos_gerados.png" width="500"/>
   <br>
   <b>Figura 2 – Arquivos gerados após o processamento LiDAR.</b>
 </p>
@@ -151,7 +150,7 @@ Validar os dados em ambiente SIG:
 ---
 
 <p align="center">
-  <img src="images/arquivos_grids.png" width="700"/>
+  <img src="images/arquivos_grids.png" width="300"/>
   <br>
   <b>Figura 3 – Arquivos raster e vetoriais para validação.</b>
 </p>
@@ -181,7 +180,7 @@ Grid 36 representa altura da vegetação. Recomenda-se reclassificação.
 ---
 
 <p align="center">
-  <img src="images/distri_valores.png" width="700"/>
+  <img src="images/distri_valores.png" width="500"/>
   <br>
   <b>Figura 5 – Distribuição de valores de altura.</b>
 </p>
