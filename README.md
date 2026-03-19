@@ -20,6 +20,7 @@
 - [5. Processamento dos Dados](#5-processamento-dos-dados)
 - [6. Verificação no GIS](#6-verificação-no-gis)
 - [7. Armazenamento](#7-armazenamento)
+
 ---
 
 ## 1. Objetivo
@@ -59,11 +60,10 @@ Os dados LiDAR devem ser obtidos, preferencialmente, a partir das seguintes inst
 
 Instalar previamente:
 
-- **FUSION** – processamento LiDAR  
-- **LAStools** – manipulação de dados  
-- **Notepad++** – edição de scripts  
+- **FUSION** – processamento LiDAR  - Link: https://forsys.sefs.uw.edu/fusion/fusionlatest.html
+- **LAStools** – manipulação de dados - Link: https://lastools.github.io/  
+- **Notepad++** – edição de scripts - Link: https://notepad-plus-plus.org/downloads/
 
----
 
 ## 3.1 Preparação do Ambiente
 
@@ -72,7 +72,6 @@ Recomenda-se instalar diretamente no diretório raiz:
 *`C:\FUSION`*  
 *`C:\LAStools`*
 
----
 
 ## 3.2 Ajustes no FUSION (Suporte a .LAZ)
 
@@ -101,7 +100,6 @@ Antes de iniciar o processamento dos dados LiDAR, recomenda-se realizar uma **av
 
 Essa etapa permite validar se o arquivo `.LAZ` possui qualidade adequada para processamento.
 
----
 
 ### 4.1 Abertura do FUSION
 
@@ -110,15 +108,12 @@ Essa etapa permite validar se o arquivo `.LAZ` possui qualidade adequada para pr
 
 **Tools → Miscellaneous Utilities → Create an image using LiDAR point data**
 
----
-
 <p align="center">
   <img src="images/2.png" width="500"/>
   <br>
   <b>Figura 9 – Print da tela do programa FUSION.</b>
 </p>
 
----
 
 ### 4.2 Seleção do arquivo LiDAR
 
@@ -126,7 +121,6 @@ Após acessar a ferramenta, será aberta uma janela para seleção do arquivo `.
 
 Selecionar o arquivo desejado e clicar em **Abrir**.
 
----
 
 <p align="center">
   <img src="images/3.png" width="500"/>
@@ -134,7 +128,6 @@ Selecionar o arquivo desejado e clicar em **Abrir**.
   <b>Figura 10 – Seleção do arquivo LiDAR (.LAZ).</b>
 </p>
 
----
 
 ### 4.3 Definição da saída da imagem
 
@@ -158,7 +151,6 @@ Ao término, será exibida a mensagem **“Done”** no rodapé da tela.
   <b>Figura 11 – Tela para configuração e geração da imagem.</b>
 </p>
 
----
 
 ### 4.4 Visualização da nuvem de pontos (Raw Data)
 
@@ -168,7 +160,6 @@ Após a geração da imagem:
 2. Selecionar a opção **Raw Data** no menu superior  
 3. Abrir novamente o arquivo `.LAZ`  
 
----
 
 <p align="center">
   <img src="images/5.png" width="500"/>
@@ -176,7 +167,6 @@ Após a geração da imagem:
   <b>Figura 12 – Tela de acesso aos dados brutos (Raw Data).</b>
 </p>
 
----
 
 ### 4.5 Seleção de área para análise
 
@@ -187,7 +177,6 @@ Com o arquivo carregado:
 
 > ⚠️ Áreas maiores demandam maior tempo de processamento.
 
----
 
 <p align="center">
   <img src="images/6.png" width="500"/>
@@ -195,7 +184,6 @@ Com o arquivo carregado:
   <b>Figura 13 – Seleção de uma porção do transecto para análise.</b>
 </p>
 
----
 
 ### 4.6 Análise tridimensional dos dados
 
@@ -205,8 +193,6 @@ Após o processamento da área selecionada:
 - É possível rotacionar a cena nos eixos **X, Y e Z**  
 - Permite avaliar a estrutura da vegetação de forma mais realista  
 
----
-
 <p align="center">
   <img src="images/7.png" width="350"/>
   <img src="images/8.png" width="350"/>
@@ -215,7 +201,6 @@ Após o processamento da área selecionada:
   <b>Figura 14,15 e 16 – Avaliação da seção selecionada da nuvem de pontos em ambiente 3D.</b>
 </p>
 
----
 
 ### 4.7 Validação dos dados
 
@@ -238,7 +223,6 @@ Processamento realizado via script no Prompt de Comando.
 Arquivo original: `proa.txt`  
 Renomear para: `proa.bat`
 
----
 
 ### Configuração
 
@@ -246,15 +230,12 @@ Renomear para: `proa.bat`
 - Atualizar caminhos do arquivo LiDAR  
 - Utilizar: `Ctrl + F → Substituir`
 
----
 
 ### Saída esperada
 
 Arquivos gerados em:
 
 *`C:\FUSION\DATA`*
-
----
 
 <p align="center">
   <img src="images/proab_script.png" width="500"/>
@@ -264,7 +245,6 @@ Arquivos gerados em:
 
 O caminho destacado deve ser atualizado a cada execução.
 
----
 
 <p align="center">
   <img src="images/arquivos_gerados.png" width="500"/>
@@ -281,7 +261,6 @@ Validar os dados em ambiente SIG:
 - QGIS  
 - ArcGIS  
 
----
 
 <p align="center">
   <img src="images/arquivos_grids.png" width="300"/>
@@ -289,7 +268,6 @@ Validar os dados em ambiente SIG:
   <b>Figura 3 – Arquivos raster e vetoriais para validação.</b>
 </p>
 
----
 
 ### Verificações obrigatórias
 
@@ -297,7 +275,6 @@ Validar os dados em ambiente SIG:
 - Fuso (ex: 21S)  
 - Área correta (ex: Flona Altamira)  
 
----
 
 <p align="center">
   <img src="images/shape_transecto.png" width="700"/>
@@ -305,7 +282,6 @@ Validar os dados em ambiente SIG:
   <b>Figura 4 – Shapefile do transecto no ArcGIS.</b>
 </p>
 
----
 
 ### Análise dos dados
 
@@ -325,12 +301,11 @@ Grid 36 representa altura da vegetação. Recomenda-se reclassificação.
   <b>Figura 6 – Reclassificação do raster.</b>
 </p>
 
----
 
 ### Dados a validar
 
 | Grid | Descrição |
-|------|----------|
+|:----:|:---------:|
 | 36 | Elevação P90 |
 | 50 | Percentual acima do *heightbreak* |
 | 68 | Canopy Relief Ratio |
@@ -339,7 +314,6 @@ Grid 36 representa altura da vegetação. Recomenda-se reclassificação.
 
 *`C:\FUSION\doc\FUSION_manual.pdf`*
 
----
 
 ### Conferência final
 
@@ -347,7 +321,6 @@ Grid 36 representa altura da vegetação. Recomenda-se reclassificação.
 - Comparar com imagens de satélite  
 - Avaliar coerência dos dados  
 
----
 
 <p align="center">
   <img src="images/compara1.png" width="350"/>
