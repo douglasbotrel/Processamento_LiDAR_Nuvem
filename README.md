@@ -61,7 +61,7 @@ Os dados LiDAR devem ser obtidos, preferencialmente, a partir das seguintes inst
 Instalar previamente:
 
 - **FUSION** – processamento LiDAR  - Link: https://forsys.sefs.uw.edu/fusion/fusionlatest.html
-- **LAStools** – manipulação de dados - Link: https://lastools.github.io/  
+- **LAStools** – manipulação de dados - Link: https://rapidlasso.de/downloads/
 - **Notepad++** – edição de scripts - Link: https://notepad-plus-plus.org/downloads/
 
 
